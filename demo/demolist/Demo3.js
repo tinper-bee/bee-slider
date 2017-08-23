@@ -11,7 +11,7 @@ class Demo3 extends Component {
 	}
 
 	render () {
-		let style={width:600,marginLeft:50}
+		let style={width:600,marginLeft:50,marginBottom:60}
 		return (
 				<div style={style}>
 					<p>Slider with custom handle and track style.</p>

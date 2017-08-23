@@ -1,7 +1,7 @@
 /**
 *
 * @title 带有marks的slider
-* @description 
+* @description 带有marks标签的step
 *
 */
 class Demo4 extends Component {
@@ -46,27 +46,27 @@ class Demo4 extends Component {
 				<Slider min={0} marks={marksOther} step={20} defaultValue={58} onChange={this.log} />
 				</div>
 				<div style={style}>
-				<p>（4）Slider with marks and `dots steps=20`</p>
+				<p>（3）Slider with marks and `dots steps=20`</p>
 				<Slider dots min={0} marks={marksOther} step={20} defaultValue={58} onChange={this.log} />
 				</div>
 				<div style={style}>
-				<p>（3）Slider with marks, `step=null`，因此step = marks</p>
+				<p>（4）Slider with marks, `step=null`，因此step = marks</p>
 				<Slider min={0} marks={marksOther} step={null} defaultValue={68} onChange={this.log}  />
 				</div>
 				<div style={style}>
-				<p>Slider with marks, `included=false`</p>
+				<p>（5）Slider with marks, `included=false`</p>
 				<Slider min={0} marks={marksOther} included={false} defaultValue={20} />
 				</div>
 				<div style={style}>
-				<p>Slider with marks and `steps=10,included=false`</p>
+				<p>（6）Slider with marks and `steps=10,included=false`</p>
 				<Slider min={-10} marks={marks} step={10} included={false} defaultValue={20} />
 				</div>
 				<div style={style}>
-				<p>Range with marks</p>
+				<p>（7）Range with marks</p>
 				<Slider.Range min={-10} marks={marks} onChange={this.log} defaultValue={[20, 40]} />
 				</div>
 				<div style={style}>
-				<p>Range with marks and steps</p>
+				<p>（8）Range with marks and steps</p>
 				<Slider.Range min={-10} marks={marks} step={10} onChange={this.log} defaultValue={[20, 40]} />
 				</div>
 				</div>

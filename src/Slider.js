@@ -60,7 +60,7 @@ class Slider extends React.Component {
     if (isNotControlled) {
       this.setState(state);
     }
-    console.log("改变之后的："+state.value);
+    //console.log("改变之后的："+state.value);
     const changedValue = state.value;
     props.onChange(changedValue);
   }
@@ -73,7 +73,7 @@ class Slider extends React.Component {
     //3.1 getSliderStart:slider的top或者left（主持或者水平）， pixelOffset = position - this.getSliderStart()得到mouseposition 或者 handlePosition - slider的top（或者left）
     //3.2 this.calcValue(pixelOffset)：目的得到value，跟ratio有关
     //3.3 this.trimAlignValue(this.calcValue(pixelOffset)):在slider.jsx中1.ensureValueInRange 先算出是否可取 v 或者 min 或者 max 2.ensureValuePrecision：来获取真的前进数值closest数值
-    //4.onChange：setState{value}的值并且调用props.onChange
+    //4.onChange：得到改变之后的值，setState{value}的值并且调用props.onChange
     this.setState({ dragging: true });
     const props = this.props;
     const prevValue = this.getValue();

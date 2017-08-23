@@ -1,7 +1,7 @@
 /**
 *
-* @title 自定义slider
-* @description 自定义slider样式（track,handle,rail等样式自定义）
+* @title 竖直方向的slider
+* @description 竖直vertical
 *
 */
 
@@ -11,25 +11,44 @@ class Demo6 extends Component {
 	}
 
 	render () {
-		let style={width:600,marginLeft:50}
+	  const style={float: 'left',height: 400, marginBottom: 160, marginLeft: 50,width:200}
+	  const parentStyle = { overflow: 'hidden' };
+		const marks = {
+			0: <strong>0°C</strong>,
+			26: '26°C',
+			47: '47°C',
+			100: {
+				style: {
+				color: 'red',
+				},
+				label: <strong>100°C</strong>
+			}
+		};
+
 		return (
-				<div style={style}>
-					<p>Slider with custom handle and track style.</p>
-					<Slider
-					defaultValue={30}
-					trackStyle={{ backgroundColor: 'blue', height: 10 }}
-					handleStyle={{
-					borderColor: 'blue',
-					height: 28,
-					width: 28,
-					marginLeft: -14,
-					marginTop: -9,
-					backgroundColor: 'pink',
-					}}
-					railStyle={{ backgroundColor: 'red', height: 10 }}
-					/>
+				<div style={parentStyle}>
+						<div style={style}>
+						<p>Slider with `marks, step=null`</p>
+						<Slider vertical min={0} marks={marks} step={null} onChange={this.log} defaultValue={20} />
+						</div>
+						<div style={style}>
+						<p>Slider with `marks and steps=10`</p>
+						<Slider vertical dots min={0} marks={marks} step={50} onChange={this.log} defaultValue={20} />
+						</div>
+						<div style={style}>
+						<p>Slider with `marks and steps默认是1 included=false`</p>
+						<Slider vertical min={0} marks={marks} included={false} defaultValue={20} />
+						</div>
+						<div style={style}>
+						<p>Range with `marks steps默认是1,`</p>
+						<Slider.Range vertical min={0} marks={marks} onChange={this.log} defaultValue={[20, 40]} />
+						</div>
+						<div style={style}>
+						<p>Range with `marks and steps=10`</p>
+						<Slider.Range vertical min={0} marks={marks} step={10}onChange={this.log} defaultValue={[20, 40]}/>
+						</div>
 				</div>
 
-				)
-		}
+		)
+	}
 }

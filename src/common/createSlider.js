@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import addEventListener from 'rc-util/lib/Dom/addEventListener';
-import addEventListener from './addEventListener';
+import addEventListener from 'rc-util/lib/Dom/addEventListener';
+//import addEventListener from './addEventListener';
 import classNames from 'classnames';
 import warning from 'warning';
 

@@ -285,12 +285,12 @@ class Range extends React.Component {
     const { handle, bounds } = state;
     /* eslint-disable eqeqeq */
     if (!allowCross && handle != null) {
-      //最右边的点只能执行这个，因为handle=bounds.length-1
+      //最右边的点只能执行这个，因为handle=bounds.length-1；中间点也走这个判断
       if (handle > 0 && val <= bounds[handle - 1]) {
         console.log("ensureValueNotConflict的handle"+handle+"ensureValueNotConflict的返回数据"+bounds[handle - 1])
         return bounds[handle - 1];
       }
-      //最左边的点只能执行这个，因为handle=0
+      //最左边的点只能执行这个，因为handle=0；中间点也走这个判断
       if (handle < bounds.length - 1 && val >= bounds[handle + 1]) {
         console.log("ensureValueNotConflict的handle"+handle+"ensureValueNotConflict的返回数据"+bounds[handle + 1])
         return bounds[handle + 1];
