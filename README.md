@@ -26,6 +26,14 @@ React.render(<Slider defaultValue={20}/>,
          document.getElementById('target'));
 ```
 
+## 样式引入
+```
+<link rel="stylesheet" href="./node_modules/bee-slider/build/Slider.css">
+或者
+import "./node_modules/bee-slider/src/Slider.scss"
+//或是
+import "./node_modules/bee-slider/build/Slider.css"
+```
 
 
 ## API
