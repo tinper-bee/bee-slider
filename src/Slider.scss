@@ -1,5 +1,6 @@
 @import "../node_modules/tinper-bee-core/scss/minxin-variables";
 @import "../node_modules/tinper-bee-core/scss/minxin-mixins";
+@import "../node_modules/rc-tooltip/assets/bootstrap";
 .u-slider {
   position: relative;
   height: 14px;
@@ -254,7 +255,8 @@
   border-width: 4px 4px 0;
   border-top-color: #abe2fb;
 }
-//下面是rc-tooltip
+
+
 .rc-tooltip.rc-tooltip-zoom-enter,
 .rc-tooltip.rc-tooltip-zoom-leave {
   display: block;

@@ -26,29 +26,28 @@ class Demo6 extends Component {
 		};
 
 		return (
-				<div style={parentStyle}>
-						<div style={style}>
-						<p>Slider with `marks, step=null`</p>
-						<Slider vertical min={0} marks={marks} step={null} onChange={this.log} defaultValue={20} />
-						</div>
-						<div style={style}>
-						<p>Slider with `marks and steps=10`</p>
-						<Slider vertical dots min={0} marks={marks} step={50} onChange={this.log} defaultValue={20} />
-						</div>
-						<div style={style}>
-						<p>Slider with `marks and steps默认是1 included=false`</p>
-						<Slider vertical min={0} marks={marks} included={false} defaultValue={20} />
-						</div>
-						<div style={style}>
-						<p>Range with `marks steps默认是1,`</p>
-						<Slider.Range vertical min={0} marks={marks} onChange={this.log} defaultValue={[20, 40]} />
-						</div>
-						<div style={style}>
-						<p>Range with `marks and steps=10`</p>
-						<Slider.Range vertical min={0} marks={marks} step={10}onChange={this.log} defaultValue={[20, 40]}/>
-						</div>
+			<div style={parentStyle}>
+				<div style={style}>
+					<p>Slider with `marks, step=null`</p>
+					<Slider vertical min={0} marks={marks} step={null} onChange={this.log} defaultValue={20} />
 				</div>
-
+				<div style={style}>
+					<p>Slider with `marks and steps=10`</p>
+					<Slider vertical dots min={0} marks={marks} step={50} onChange={this.log} defaultValue={20} />
+				</div>
+				<div style={style}>
+					<p>Slider with `marks and steps默认是1 included=false`</p>
+					<Slider vertical min={0} marks={marks} included={false} defaultValue={20} />
+				</div>
+				<div style={style}>
+					<p>Range with `marks steps默认是1,`</p>
+					<Slider.Range vertical min={0} marks={marks} onChange={this.log} defaultValue={[20, 40]} />
+				</div>
+				<div style={style}>
+					<p>Range with `marks and steps=10`</p>
+					<Slider.Range vertical min={0} marks={marks} step={10}onChange={this.log} defaultValue={[20, 40]}/>
+				</div>
+			</div>
 		)
 	}
 }

@@ -13,23 +13,22 @@ class Demo3 extends Component {
 	render () {
 		let style={width:600,marginLeft:50,marginBottom:60}
 		return (
-				<div style={style}>
-					<p>Slider with custom handle and track style.</p>
-					<Slider
-					defaultValue={30}
-					trackStyle={{ backgroundColor: 'blue', height: 10 }}
-					handleStyle={{
-					borderColor: 'blue',
-					height: 28,
-					width: 28,
-					marginLeft: -14,
-					marginTop: -9,
-					backgroundColor: 'pink',
-					}}
-					railStyle={{ backgroundColor: 'red', height: 10 }}
-					/>
-				</div>
-
-				)
-		}
+			<div style={style}>
+				<p>Slider with custom handle and track style.</p>
+				<Slider
+				defaultValue={30}
+				trackStyle={{ backgroundColor: 'blue', height: 10 }}
+				handleStyle={{
+				borderColor: 'blue',
+				height: 28,
+				width: 28,
+				marginLeft: -14,
+				marginTop: -9,
+				backgroundColor: 'pink',
+				}}
+				railStyle={{ backgroundColor: 'red', height: 10 }}
+				/>
+			</div>
+		)
+	}
 }

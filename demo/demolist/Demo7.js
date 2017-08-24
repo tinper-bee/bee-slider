@@ -115,18 +115,17 @@ class Demo7 extends Component {
 
 	render () {
 		let style={width:600,marginLeft:50,marginBottom:60}
-			return (
-				<div>
-          <div style={style}>
+		return (
+			<div>
+        <div style={style}>
           <p>Customized Range</p>
           <CustomizedSlider />
-          </div>
-					<div style={style}>
-					<p>Customized Range</p>
-					<CustomizedRange />
-					</div>
-
+        </div>
+				<div style={style}>
+  				<p>Customized Range</p>
+  				<CustomizedRange />
 				</div>
-			)
-		}
+			</div>
+		)
+	}
 }
