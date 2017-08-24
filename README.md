@@ -19,13 +19,11 @@ some description...
 
 ## 使用方法
 
-```js
-const style = { width: 600, margin: 50 ,marginBottom:60};
-render(){
-    return(
-        
-    )
-}
+```
+import Slider from 'bee-slider';
+
+React.render(<Slider defaultValue={20}/>,
+         document.getElementById('target'));
 ```
 
 
