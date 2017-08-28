@@ -17,7 +17,7 @@ class Demo8 extends Component {
     const { value, dragging, index, ...restProps } = props;
     return (
       <Slider.Tooltip
-        prefixCls="rc-tooltip"
+        prefixCls="u-slider-tooltip"
         overlay={value}
         visible={dragging}
         placement="top"
