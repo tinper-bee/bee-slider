@@ -1,5 +1,6 @@
 import { findDOMNode } from 'react-dom';
-import keyCode from 'rc-util/lib/KeyCode';
+//import keyCode from 'rc-util/lib/KeyCode';
+import keyCode from 'tinper-bee-core/lib/keyCode';
 
 export function isEventFromHandle(e, handles) {
   return Object.keys(handles)
