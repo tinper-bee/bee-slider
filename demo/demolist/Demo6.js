@@ -32,8 +32,8 @@ class Demo6 extends Component {
 					<Slider vertical min={0} marks={marks} step={null} onChange={this.log} defaultValue={20} />
 				</div>
 				<div style={style}>
-					<p>Slider with `marks and steps=10`</p>
-					<Slider vertical dots min={0} marks={marks} step={50} onChange={this.log} defaultValue={20} />
+					<p>Slider with `marks and steps=25`</p>
+					<Slider vertical dots min={0} marks={marks} step={25} onChange={this.log} defaultValue={20} />
 				</div>
 				<div style={style}>
 					<p>Slider with `marks and steps默认是1 included=false`</p>
