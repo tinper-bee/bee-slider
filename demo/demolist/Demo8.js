@@ -5,39 +5,25 @@
 *
 */
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
-const RangeTootip = createSliderWithTooltip(Slider.Range);
-const Handle = Slider.Handle;
+const RangeTooltip = createSliderWithTooltip(Slider.Range);
+const SliderTooltip = createSliderWithTooltip(Slider);
 
 class Demo8 extends Component {
 	log = (value) =>{
 	console.log(value); //eslint-disable-line
 	}
 
-  handle = (props) => {
-    const { value, dragging, index, ...restProps } = props;
-    return (
-      <Slider.Tooltip
-        prefixCls="u-slider-tooltip"
-        overlay={value}
-        visible={dragging}
-        placement="top"
-        key={index}>
-        <Slider.Handle value={value} {...restProps} />
-      </Slider.Tooltip>
-    )
-  }
-
 	render () {
 		const wrapperStyle = { width: 400, margin: 50 };
 		return (
       <div>
         <div style={wrapperStyle}>
-          <p>Slider with custom handle</p>
-          <Slider min={0} max={20} defaultValue={3} handle={this.handle} />
+          <p>Slider with Tooltip</p>
+          <SliderTooltip min={0} max={100} defaultValue={45} tipFormatter={value => `${value}%%`}/>
         </div>
         <div style={wrapperStyle}>
-          <p>Range with custom handle</p>
-          <RangeTootip min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />
+          <p>Range with Tooltip</p>
+          <RangeTooltip min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />
         </div>
       </div>
 		)
