@@ -36,7 +36,7 @@ import "./node_modules/bee-slider/build/Slider.css"
 ```
 
 
-##API
+## API
 |参数|说明|类型|默认值|
 |:--|:---:|:--:|---:|
 |min|最小值，默认0|number|0|
