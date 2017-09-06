@@ -36,16 +36,16 @@ import "./node_modules/bee-slider/build/Slider.css"
 ```
 
 
-## API
+##API
 |参数|说明|类型|默认值|
 |:--|:---:|:--:|---:|
 |min|最小值，默认0|number|0|
 |max|最大值，默认100|number|100|
-|step|步长，取值必须大于0，并且可被(max-min)整除。当marks不为空对象时，可以设置step为null，此时Slider的可选值仅有marks标出来的部分，默认1|（number或者null）|1|
+|step|步长，取值必须大于0，并且可被(max-min)整除。当marks不为空对象时，可以设置step为null，此时Slider的可选值仅有marks标出来的部分，默认1|（number OR null）|1|
 |dots|是否只能拖拽到刻度上，默认是false|boolean|false|
-|marks|刻度标记，key的类型必须为number且取值在闭区间min,max内，每个标签可以单独设置样式|object|{number:string}或者{number:{style:object,label:string}}|
-|value|设置当前取值。当range为false时，使用number，否则用[number,number]|number或者[number,number]|0或者[0,0]|
-|defaultValue|设置初始取值。当range为false时，使用number，否则用[number,number]|number或者[number,bumber]|0或者[0,0]|
+|marks|刻度标记，key的类型必须为number且取值在闭区间min,max内，每个标签可以单独设置样式|object|{number:string} OR {number:{style:object,label:string}}|
+|value|设置当前取值。当range为false时，使用number，否则用[number,number]|number OR [number,number]|0 OR [0,0]|
+|defaultValue|设置初始取值。当range为false时，使用number，否则用[number,number]|number OR [number,bumber]|0 OR [0,0]|
 |included|marks不为空对象时有效，值为true时表示值为包含关系，false表示并列|boolean|true|
 |disabled|值为true时，滑块为禁用状态|boolean|false|
 |vertical|值为true时，Slider为垂直方向|Boolean|false|
