@@ -24,8 +24,8 @@ class Demo1 extends Component {
 				  <Slider defaultValue={20} onAfterChange={this.log}/>
 				</div>
 				<div style={style}>
-				  <p>Basic Slider，step=20</p>
-				  <Slider step={20} defaultValue={40} onAfterChange={this.log} />
+				  <p>Basic Slider，`step=20 className="owner-slider"`</p>
+				  <Slider step={20} defaultValue={40}  className={"owner-slider" }onAfterChange={this.log} />
 				</div>
 				<div style={style}>
 				  <p>Basic Slider, disabled</p>
