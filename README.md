@@ -46,6 +46,7 @@ import "./node_modules/bee-slider/build/Slider.css"
 |marks|刻度标记，key的类型必须为number且取值在闭区间min,max内，每个标签可以单独设置样式。格式是{number:string}或者{number:{style:object,label:string}}|object|-|
 |value|设置当前取值。当range为false时，使用number，否则用[number,number]|number OR [number,number]|0 OR [0,0]|
 |defaultValue|设置初始取值。当range为false时，使用number，否则用[number,number]|number OR [number,bumber]|0 OR [0,0]|
+|className|增加额外的class|string|''|
 |included|marks不为空对象时有效，值为true时表示值为包含关系，false表示并列|boolean|true|
 |disabled|值为true时，滑块为禁用状态|boolean|false|
 |vertical|值为true时，Slider为垂直方向|Boolean|false|
