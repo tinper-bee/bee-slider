@@ -5,6 +5,9 @@
 *
 */
 
+import React, { Component } from 'react';
+import Slider from '../../src';
+
 class CustomizedSlider extends React.Component {
   constructor(props) {
     super(props);
@@ -129,3 +132,5 @@ class Demo7 extends Component {
 		)
 	}
 }
+
+export default Demo7;

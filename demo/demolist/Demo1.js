@@ -5,6 +5,10 @@
 *
 */
 
+
+import React, { Component } from 'react';
+import Slider from '../../src';
+
 const style = { width: 600, margin: 50 ,marginBottom:60};
 class Demo1 extends Component {
 	
@@ -35,3 +39,6 @@ class Demo1 extends Component {
 		)
 	}
 }
+
+
+export default Demo1;

@@ -5,6 +5,9 @@
 *
 */
 
+import React, { Component } from 'react';
+import Slider from '../../src';
+
 class PureRenderRange extends React.Component {
   constructor(props) {
     super(props);
@@ -58,3 +61,5 @@ class Demo5 extends Component {
 		)
 	}
 }
+
+export default Demo5;

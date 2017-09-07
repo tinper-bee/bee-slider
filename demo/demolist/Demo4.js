@@ -4,6 +4,11 @@
 * @description 带有marks标签的step
 *
 */
+
+
+import React, { Component } from 'react';
+import Slider from '../../src';
+
 class Demo4 extends Component {
 	log = (value) =>{
 	console.log(value); //eslint-disable-line
@@ -74,3 +79,5 @@ class Demo4 extends Component {
 		)
 	}
 }
+
+export default Demo4;

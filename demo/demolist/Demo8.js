@@ -4,6 +4,10 @@
 * @description 和 tip展示 组件保持同步。
 *
 */
+
+import React, { Component } from 'react';
+import Slider from '../../src';
+
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const RangeTooltip = createSliderWithTooltip(Slider.Range);
 const SliderTooltip = createSliderWithTooltip(Slider);
@@ -29,3 +33,5 @@ class Demo8 extends Component {
 		)
 	}
 }
+
+export default Demo8;

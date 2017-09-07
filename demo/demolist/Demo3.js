@@ -5,6 +5,9 @@
 *
 */
 
+import React, { Component } from 'react';
+import Slider from '../../src';
+
 class Demo3 extends Component {
 	log = (value) =>{
 	console.log(value); //eslint-disable-line
@@ -32,3 +35,5 @@ class Demo3 extends Component {
 		)
 	}
 }
+
+export default Demo3;
