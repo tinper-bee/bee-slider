@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Tooltip from 'rc-tooltip';
+//import Tooltip from 'rc-tooltip';
+import Tooltip from 'bee-tooltip';
+import OverlayTrigger from 'bee-overlay/build/OverlayTrigger';
 import Handle from './Handle';
 
 export default function createSliderWithTooltip(Component) {
@@ -10,15 +12,23 @@ export default function createSliderWithTooltip(Component) {
       handleStyle: PropTypes.arrayOf(PropTypes.object),
       tipProps: PropTypes.object,
     };
+
     static defaultProps = {
       tipFormatter(value) { return value; },
       handleStyle: [{}],
       tipProps: {},
     };
+
     constructor(props) {
       super(props);
       this.state = { visibles: {} };
     }
+
+    componentWillReceiveProps(nextProps) {
+      console.log(nextProps);
+      return
+    }
+
     handleTooltipVisibleChange = (index, visible) => {
       this.setState((prevState) => {
         return {
@@ -29,6 +39,7 @@ export default function createSliderWithTooltip(Component) {
         };
       });
     }
+
     handleWithTooltip = ({ value, dragging, index, disabled, ...restProps }) => {
       const {
         tipFormatter,
@@ -38,16 +49,18 @@ export default function createSliderWithTooltip(Component) {
 
       const {
         prefixCls = 'u-slider-tooltip',
-        overlay = tipFormatter(value),
+        overlay = <Tooltip id="tooltip1" className="in" >{tipFormatter(value)}</Tooltip>,
         placement = 'top',
         ...restTooltipProps,
       } = tipProps;
 
+
       return (
-        <Tooltip
+        <OverlayTrigger
           {...restTooltipProps}
-          prefixCls={prefixCls}
+          className={prefixCls}
           overlay={overlay}
+          shouldUpdatePosition = {true}
           placement={placement}
           visible={!disabled && (this.state.visibles[index] || dragging)}
           key={index}
@@ -61,7 +74,7 @@ export default function createSliderWithTooltip(Component) {
             onMouseEnter={() => this.handleTooltipVisibleChange(index, true)}
             onMouseLeave={() => this.handleTooltipVisibleChange(index, false)}
           />
-        </Tooltip>
+        </OverlayTrigger>
       );
     }
     render() {

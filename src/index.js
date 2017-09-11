@@ -9,4 +9,4 @@ Slider.Handle = Handle;
 Slider.createSliderWithTooltip = createSliderWithTooltip;
 //Slider.Tooltip = Tooltip;
 export default Slider;
-export { Range, Handle, createSliderWithTooltip };
+//export { Range, Handle, createSliderWithTooltip };

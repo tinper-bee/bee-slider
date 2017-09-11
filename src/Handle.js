@@ -22,6 +22,7 @@ export default class Handle extends React.Component {
         'aria-disabled': !!disabled,
       };
     }
+
     return (
       <div
         role="slider"

@@ -23,7 +23,7 @@ class Demo8 extends Component {
       <div>
         <div style={wrapperStyle}>
           <p>Slider with Tooltip</p>
-          <SliderTooltip min={0} max={100} defaultValue={45} tipFormatter={value => `${value}%%`}/>
+          <SliderTooltip min={0} max={100} defaultValue={45} tipFormatter={value => `${value}%`}/>
         </div>
         <div style={wrapperStyle}>
           <p>Range with Tooltip</p>
