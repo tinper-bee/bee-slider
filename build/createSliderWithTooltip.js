@@ -92,7 +92,7 @@ function createSliderWithTooltip(Component) {
           _extends({}, restTooltipProps, {
             className: prefixCls,
             overlay: overlay,
-            positionLeft: '' + value,
+            shouldUpdatePosition: true,
             placement: placement,
             visible: !disabled && (_this.state.visibles[index] || dragging),
             key: index

@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import warning from 'warning';
+import PropTypes from 'prop-types';
 
 const calcPoints = (vertical, marks, dots, step, min, max) => {
   warning(
