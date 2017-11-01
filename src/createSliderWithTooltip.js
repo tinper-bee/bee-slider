@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import Tooltip from 'rc-tooltip';
 import Tooltip from 'bee-tooltip';
-import OverlayTrigger from 'bee-overlay/build/OverlayTrigger';
 import Handle from './Handle';
 
 export default function createSliderWithTooltip(Component) {
@@ -25,8 +23,7 @@ export default function createSliderWithTooltip(Component) {
     }
 
     componentWillReceiveProps(nextProps) {
-      console.log(nextProps);
-      return
+      
     }
 
     handleTooltipVisibleChange = (index, visible) => {
@@ -49,14 +46,14 @@ export default function createSliderWithTooltip(Component) {
 
       const {
         prefixCls = 'u-slider-tooltip',
-        overlay = <Tooltip id="tooltip1" className="in" >{tipFormatter(value)}</Tooltip>,
+        overlay = tipFormatter(value),
         placement = 'top',
         ...restTooltipProps,
       } = tipProps;
 
 
       return (
-        <OverlayTrigger
+        <Tooltip
           {...restTooltipProps}
           className={prefixCls}
           overlay={overlay}
@@ -74,7 +71,7 @@ export default function createSliderWithTooltip(Component) {
             onMouseEnter={() => this.handleTooltipVisibleChange(index, true)}
             onMouseLeave={() => this.handleTooltipVisibleChange(index, false)}
           />
-        </OverlayTrigger>
+        </Tooltip>
       );
     }
     render() {

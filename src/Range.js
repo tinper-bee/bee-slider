@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-//import shallowEqual from 'shallowequal';
 import shallowEqual from './common/shallowequal';
 import warning from 'warning';
 import Track from './common/Track';
