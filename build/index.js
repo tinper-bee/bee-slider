@@ -22,13 +22,9 @@ var _createSliderWithTooltip2 = _interopRequireDefault(_createSliderWithTooltip)
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-//import Tooltip from 'rc-tooltip';
-
 _Slider2["default"].Range = _Range2["default"];
 _Slider2["default"].Handle = _Handle2["default"];
 _Slider2["default"].createSliderWithTooltip = _createSliderWithTooltip2["default"];
-//Slider.Tooltip = Tooltip;
-exports["default"] = _Slider2["default"];
-//export { Range, Handle, createSliderWithTooltip };
 
+exports["default"] = _Slider2["default"];
 module.exports = exports['default'];

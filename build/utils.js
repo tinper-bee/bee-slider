@@ -25,8 +25,6 @@ var _keyCode2 = _interopRequireDefault(_keyCode);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-//import keyCode from 'rc-util/lib/KeyCode';
-
 
 function isEventFromHandle(e, handles) {
   return Object.keys(handles).some(function (key) {
