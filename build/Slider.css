@@ -137,7 +137,7 @@
   left: 0;
   height: 4px;
   border-radius: 6px;
-  background-color: #2db7f5; }
+  background-color: rgba(30,136,229,.6); }
 
 .u-slider-handle {
   position: absolute;
@@ -149,22 +149,22 @@
   cursor: -webkit-grab;
   cursor: grab;
   border-radius: 50%;
-  border: solid 2px #2db7f5;
+  border: solid 2px rgba(30,136,229,.5);
   background-color: #fff;
   touch-action: pan-x; }
 
 .u-slider-handle:hover {
-  border-color: #2db7f5; }
+  border-color: rgba(30,136,229,.2); }
 
 .u-slider-handle:active {
-  border-color: #2db7f5;
-  box-shadow: 0 0 5px #2db7f5;
+  border-color: rgba(30,136,229,.2);
+  box-shadow: 0 0 5px rgba(30,136,229,.2);
   cursor: -webkit-grabbing;
   cursor: grabbing; }
 
 .u-slider-handle:focus {
-  border-color: #2db7f5;
-  box-shadow: 0 0 0 5px #2db7f5;
+  border-color: rgba(30,136,229,.2);
+  box-shadow: 0 0 0 5px rgba(30,136,229,.5);
   outline: none; }
 
 .u-slider-mark {
@@ -210,7 +210,7 @@
   margin-left: -4px; }
 
 .u-slider-dot-active {
-  border-color: #2db7f5; }
+  border-color: rgba(30,136,229,.5); }
 
 .u-slider-disabled {
   background-color: #e9e9e9; }
