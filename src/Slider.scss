@@ -118,42 +118,42 @@
   .u-slider-disabled .u-slider-dot {
     cursor: not-allowed;
   }
-  .u-slider-vertical {
+  &.u-slider-vertical {
     width: 14px;
     height: 100%;
     padding: 0 5px;
   }
-  .u-slider-vertical .u-slider-rail {
+  &.u-slider-vertical .u-slider-rail {
     height: 100%;
     width: 4px;
   }
-  .u-slider-vertical .u-slider-track {
+  &.u-slider-vertical .u-slider-track {
     left: 5px;
     bottom: 0;
     width: 4px;
   }
-  .u-slider-vertical .u-slider-handle {
+  &.u-slider-vertical .u-slider-handle {
     margin-left: -5px;
     margin-bottom: -7px;
     touch-action: pan-y;
   }
-  .u-slider-vertical .u-slider-mark {
+  &.u-slider-vertical .u-slider-mark {
     top: 0;
     left: 18px;
     height: 100%;
   }
-  .u-slider-vertical .u-slider-step {
+  &.u-slider-vertical .u-slider-step {
     height: 100%;
     width: 4px;
   }
-  .u-slider-vertical .u-slider-dot {
+  &.u-slider-vertical .u-slider-dot {
     left: 2px;
     margin-bottom: -4px;
   }
-  .u-slider-vertical .u-slider-dot:first-child {
+  &.u-slider-vertical .u-slider-dot:first-child {
     margin-bottom: -4px;
   }
-  .u-slider-vertical .u-slider-dot:last-child {
+  &.u-slider-vertical .u-slider-dot:last-child {
     margin-bottom: -4px;
   }
   .u-slider-tooltip-zoom-down-enter,
