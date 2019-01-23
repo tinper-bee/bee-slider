@@ -1,5 +1,10 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/tinper-bee/bee-slider/compare/v1.0.3...v2.0.0) (2019-01-23)
+
+
+
 <a name="1.0.3"></a>
-## 1.0.3 (2019-01-17)
+## [1.0.3](https://github.com/tinper-bee/bee-slider/compare/c503b36...v1.0.3) (2019-01-17)
 
 
 ### Bug Fixes
