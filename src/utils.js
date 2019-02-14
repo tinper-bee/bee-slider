@@ -1,3 +1,7 @@
+/**
+* This source code is quoted from rc-slider.
+* homepage: https://github.com/react-component/slider
+*/
 import { findDOMNode } from 'react-dom';
 import keyCode from 'tinper-bee-core/lib/keyCode';
 
