@@ -1,3 +1,7 @@
+/**
+* This source code is quoted from rc-slider.
+* homepage: https://github.com/react-component/slider
+*/
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

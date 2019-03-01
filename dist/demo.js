@@ -76,7 +76,7 @@
 	
 	var CARETUP = _react2['default'].createElement('i', { className: 'uf uf-arrow-up' });
 	
-	var Demo1 = __webpack_require__(84);var Demo2 = __webpack_require__(121);var Demo3 = __webpack_require__(122);var Demo4 = __webpack_require__(123);var Demo5 = __webpack_require__(124);var Demo6 = __webpack_require__(125);var Demo7 = __webpack_require__(126);var Demo8 = __webpack_require__(127);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 标准slider", "code": "/**\r\n*\r\n* @title 标准slider\r\n* @description 基础的slider\r\n*\r\n*/\r\n\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nconst style = { width: 600, margin: 50 ,marginBottom:60};\r\nclass Demo1 extends Component {\r\n\t\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t  <p>Basic Slider，`step默认1`</p>\r\n\t\t\t\t  <Slider defaultValue={20} onAfterChange={this.log}/>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t  <p>Basic Slider，`step=20 className=\"owner-slider\"`</p>\r\n\t\t\t\t  <Slider step={20} defaultValue={40}  className={\"owner-slider\" }onAfterChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t  <p>Basic Slider, disabled</p>\r\n\t\t\t\t   <Slider disabled defaultValue={60} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t  <p>Controlled Slider，不可改变</p>\r\n\t\t\t\t  <Slider value={40} />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n\r\n", "desc": " 基础的slider" }, { "example": _react2['default'].createElement(Demo2, null), "title": " 带有dots的slider(dots间距同step)", "code": "/**\r\n*\r\n* @title 带有dots的slider(dots间距同step)\r\n* @description 基础的slider\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass Demo2 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tconst style = {width:600,marginLeft:50,marginBottom:60}\r\n\t\treturn (\r\n\t\t\t<div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Slider，`step=20, dots `</p>\r\n\t\t\t\t\t<Slider dots step={20} defaultValue={60} onAfterChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Slider，`step=10, dots, dotStyle={\"{borderColor: 'orange'}\"}, activeDotStyle={\"{borderColor: 'yellow'}\"}`</p>\r\n\t\t\t\t\t<Slider dots step={10} defaultValue={100} onAfterChange={this.log} dotStyle={{ borderColor: 'orange' }} activeDotStyle={{ borderColor: 'yellow' }} />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 基础的slider" }, { "example": _react2['default'].createElement(Demo3, null), "title": " 自定义slider", "code": "/**\r\n*\r\n* @title 自定义slider\r\n* @description 自定义slider样式（track,handle,rail等样式自定义）\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass Demo3 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tlet style={width:600,marginLeft:50,marginBottom:60}\r\n\t\treturn (\r\n\t\t\t<div style={style}>\r\n\t\t\t\t<p>Slider with custom handle and track style.</p>\r\n\t\t\t\t<Slider\r\n\t\t\t\tdefaultValue={30}\r\n\t\t\t\ttrackStyle={{ backgroundColor: 'blue', height: 10 }}\r\n\t\t\t\thandleStyle={{\r\n\t\t\t\tborderColor: 'blue',\r\n\t\t\t\theight: 28,\r\n\t\t\t\twidth: 28,\r\n\t\t\t\tmarginLeft: -14,\r\n\t\t\t\tmarginTop: -9,\r\n\t\t\t\tbackgroundColor: 'pink',\r\n\t\t\t\t}}\r\n\t\t\t\trailStyle={{ backgroundColor: 'red', height: 10 }}\r\n\t\t\t\t/>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 自定义slider样式（track,handle,rail等样式自定义）" }, { "example": _react2['default'].createElement(Demo4, null), "title": " 带有marks的slider", "code": "/**\r\n*\r\n* @title 带有marks的slider\r\n* @description 带有marks标签的step\r\n*\r\n*/\r\n\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass Demo4 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tlet style={width:600,marginLeft:50,marginBottom:60};\r\n\t\tconst marks = {\r\n\t\t\t'-10': '-10°C',\r\n\t\t\t0: <strong>0°C</strong>,\r\n\t\t\t26: '26°C',\r\n\t\t\t47: '47°C',\r\n\t\t\t100: {\r\n\t\t\t\tstyle: {\r\n\t\t\t\tcolor: 'red',\r\n\t\t\t\t},\r\n\t\t\t\tlabel: <strong>100°C</strong>\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\tconst marksOther = {\r\n\t\t\t0: <strong>0°C</strong>,\r\n\t\t\t33: '33°C',\r\n\t\t\t87: '87°C',\r\n\t\t\t100: {\r\n\t\t\t\tstyle: {\r\n\t\t\t\tcolor: 'red',\r\n\t\t\t\t},\r\n\t\t\t\tlabel: <strong>100°C</strong>\r\n\t\t\t}\r\n\t\t};\r\n\t\t\r\n\t\treturn (\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（1）Slider with marks,`steps默认是1`</p>\r\n\t\t\t\t\t\t<Slider min={-10} marks={marks} defaultValue={33} onChange={this.log}  />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（2）Slider with marks and `steps=20`</p>\r\n\t\t\t\t\t\t<Slider min={0} marks={marksOther} step={20} defaultValue={58} onChange={this.log} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（3）Slider with marks and `dots steps=20`</p>\r\n\t\t\t\t\t\t<Slider dots min={0} marks={marksOther} step={20} defaultValue={58} onChange={this.log} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（4）Slider with marks, `step=null`，因此step = marks</p>\r\n\t\t\t\t\t\t<Slider min={0} marks={marksOther} step={null} defaultValue={68} onChange={this.log}  />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（5）Slider with marks, `included=false`</p>\r\n\t\t\t\t\t\t<Slider min={0} marks={marksOther} included={false} defaultValue={20} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（6）Slider with marks and `steps=10,included=false`</p>\r\n\t\t\t\t\t\t<Slider min={-10} marks={marks} step={10} included={false} defaultValue={20} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（7）Range with marks</p>\r\n\t\t\t\t\t\t<Slider.Range min={-10} marks={marks} onChange={this.log} defaultValue={[20, 40]} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（8）Range with marks and steps</p>\r\n\t\t\t\t\t\t<Slider.Range min={-10} marks={marks} step={10} onChange={this.log} defaultValue={[20, 40]} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 带有marks标签的step" }, { "example": _react2['default'].createElement(Demo5, null), "title": " rangeSlider", "code": "/**\r\n*\r\n* @title rangeSlider\r\n* @description 数组变化的slider\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass PureRenderRange extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n  }\r\n  \r\n  handleChange = (value) => {\r\n    console.log(value);\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <Slider.Range defaultValue={[20, 40, 60, 80]} onChange={this.handleChange} allowCross={false} />\r\n    );\r\n  }\r\n}\r\n\r\nclass Demo5 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tlet style={width:600,marginLeft:50,marginBottom:60}\r\n\t\treturn (\r\n\t\t\t<div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`allowCross=false step默认是1 defaultValue=[0, 20]`</p>\r\n\t\t\t\t\t<Slider.Range allowCross={false} defaultValue={[0, 20]} onChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`allowCross=true step默认是1 defaultValue=[10, 40]`</p>\r\n\t\t\t\t\t<Slider.Range defaultValue={[10, 40]} onChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`disabled defaultValue=[0, 20]`</p>\r\n\t\t\t\t\t<Slider.Range allowCross={false} defaultValue={[0, 20]} onChange={this.log} disabled />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`step=20 defaultValue=[20, 80]` </p>\r\n\t\t\t\t\t<Slider.Range step={20} defaultValue={[20, 80]} onBeforeChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`step=20, dots defaultValue=[20, 40]` </p>\r\n\t\t\t\t\t<Slider.Range dots step={20} defaultValue={[20, 40]} onAfterChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Range as child component</p>\r\n\t\t\t\t\t<PureRenderRange />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 数组变化的slider" }, { "example": _react2['default'].createElement(Demo6, null), "title": " 竖直方向的slider", "code": "/**\r\n*\r\n* @title 竖直方向的slider\r\n* @description 竖直vertical\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass Demo6 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t  const style={float: 'left',height: 400, marginBottom: 160, marginLeft: 50,width:200}\r\n\t  const parentStyle = { overflow: 'hidden' };\r\n\t\tconst marks = {\r\n\t\t\t0: <strong>0°C</strong>,\r\n\t\t\t26: '26°C',\r\n\t\t\t47: '47°C',\r\n\t\t\t100: {\r\n\t\t\t\tstyle: {\r\n\t\t\t\tcolor: 'red',\r\n\t\t\t\t},\r\n\t\t\t\tlabel: <strong>100°C</strong>\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\treturn (\r\n\t\t\t<div style={parentStyle}>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Slider with `marks, step=null`</p>\r\n\t\t\t\t\t<Slider vertical min={0} marks={marks} step={null} onChange={this.log} defaultValue={20} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Slider with `marks and steps=25`</p>\r\n\t\t\t\t\t<Slider vertical dots min={0} marks={marks} step={25} onChange={this.log} defaultValue={20} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Slider with `marks and steps默认是1 included=false`</p>\r\n\t\t\t\t\t<Slider vertical min={0} marks={marks} included={false} defaultValue={20} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Range with `marks steps默认是1,`</p>\r\n\t\t\t\t\t<Slider.Range vertical min={0} marks={marks} onChange={this.log} defaultValue={[20, 40]} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Range with `marks and steps=10`</p>\r\n\t\t\t\t\t<Slider.Range vertical min={0} marks={marks} step={10}onChange={this.log} defaultValue={[20, 40]}/>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 竖直vertical" }, { "example": _react2['default'].createElement(Demo7, null), "title": " 带输入框的slider", "code": "/**\r\n*\r\n* @title 带输入框的slider\r\n* @description 和 数字输入框 组件保持同步。\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass CustomizedSlider extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this.state = {\r\n      value:45\r\n    };\r\n  }\r\n  onInputChange = (e) =>{\r\n    //console.log(e.target.value)\r\n    let value = parseInt(e.target.value);\r\n    if(value >= 100){\r\n      value = 100;\r\n    }else if(value <= 0 || e.target.value == ''){\r\n      value = 0;\r\n    }\r\n    this.changeValue(value)\r\n  }\r\n\r\n  onSliderChange = (value) => {\r\n    //console.log(value);\r\n    this.changeValue(value)\r\n  }\r\n  \r\n  changeValue = (value) =>{\r\n    this.setState({\r\n      value:value\r\n    })\r\n  }\r\n  render() {\r\n    return (\r\n      <div>\r\n        <input type=\"number\" value={this.state.value} onChange={this.onInputChange} />\r\n        <br /><br />\r\n        <Slider value={this.state.value} onChange={this.onSliderChange} />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nclass CustomizedRange extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this.state = {\r\n      lowerBound: 20,\r\n      upperBound: 40,\r\n      value: [20, 40],\r\n    };\r\n  }\r\n\r\n  onLowerBoundChange = (e) => {\r\n    let upperBound = this.state.upperBound;\r\n    let value = parseInt(e.target.value);\r\n\r\n    if(value > upperBound){\r\n      value = upperBound\r\n    }else if(value <0 || value == ''){\r\n      value = 0;\r\n    }\r\n\r\n    this.setValue(value,upperBound);\r\n  }\r\n\r\n  onUpperBoundChange = (e) => {\r\n    let lowerBound = this.state.lowerBound;\r\n    let value = parseInt(e.target.value);\r\n\r\n    if(value < lowerBound){\r\n      value = lowerBound\r\n    }else if( value > 100 ){\r\n      value = 100;\r\n    }\r\n    this.setValue(lowerBound,value);\r\n  }\r\n  \r\n  onSliderChange = (value) => {\r\n    let upperBound = value[1];\r\n    let lowerBound = value[0];\r\n    this.setValue(lowerBound,upperBound);\r\n  }\r\n  \r\n  setValue = (lowerBound,upperBound) =>{\r\n    this.setState({\r\n      lowerBound:lowerBound,\r\n      upperBound:upperBound,\r\n      value:[lowerBound, upperBound] \r\n    })\r\n  }\r\n  \r\n  render() {\r\n    return (\r\n      <div>\r\n        <label>LowerBound: </label>\r\n        <input type=\"number\" value={this.state.lowerBound} onChange={this.onLowerBoundChange} />\r\n        <br />\r\n        <label>UpperBound: </label>\r\n        <input type=\"number\" value={this.state.upperBound} onChange={this.onUpperBoundChange} />\r\n        <br /><br />\r\n        <Slider.Range value={this.state.value} onChange={this.onSliderChange} />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nclass Demo7 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tlet style={width:600,marginLeft:50,marginBottom:60}\r\n\t\treturn (\r\n\t\t\t<div>\r\n        <div style={style}>\r\n          <p>Customized Range</p>\r\n          <CustomizedSlider />\r\n        </div>\r\n\t\t\t\t<div style={style}>\r\n  \t\t\t\t<p>Customized Range</p>\r\n  \t\t\t\t<CustomizedRange />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 和 数字输入框 组件保持同步。" }, { "example": _react2['default'].createElement(Demo8, null), "title": " 带tip的slider", "code": "/**\r\n*\r\n* @title 带tip的slider\r\n* @description 和 tip展示 组件保持同步。\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nconst createSliderWithTooltip = Slider.createSliderWithTooltip;\r\nconst RangeTooltip = createSliderWithTooltip(Slider.Range);\r\nconst SliderTooltip = createSliderWithTooltip(Slider);\r\n\r\nclass Demo8 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tconst wrapperStyle = { width: 400, margin: 50 };\r\n\t\treturn (\r\n      <div>\r\n        <div style={wrapperStyle}>\r\n          <p>Slider with Tooltip</p>\r\n          <SliderTooltip min={0} max={100} defaultValue={45} tipFormatter={value => `${value}%`}/>\r\n        </div>\r\n        <div style={wrapperStyle}>\r\n          <p>Range with Tooltip</p>\r\n          <RangeTooltip min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />\r\n        </div>\r\n      </div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 和 tip展示 组件保持同步。", "scss_code": ".tooltip.in{\r\n  opacity:1;\r\n}" }];
+	var Demo1 = __webpack_require__(84);var Demo2 = __webpack_require__(121);var Demo3 = __webpack_require__(122);var Demo4 = __webpack_require__(123);var Demo5 = __webpack_require__(124);var Demo6 = __webpack_require__(125);var Demo7 = __webpack_require__(126);var Demo8 = __webpack_require__(127);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 标准slider", "code": "/**\r\n*\r\n* @title 标准slider\r\n* @description 基础的slider\r\n*\r\n*/\r\n\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nconst style = { width: 600, margin: 50 ,marginBottom:60};\r\nclass Demo1 extends Component {\r\n\t\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t  <p>Basic Slider，`step默认1`</p>\r\n\t\t\t\t  <Slider defaultValue={20} onAfterChange={this.log}/>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t  <p>Basic Slider，`step=20 className=\"owner-slider\"`</p>\r\n\t\t\t\t  <Slider step={20} defaultValue={40}  className={\"owner-slider\" }onAfterChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t  <p>Basic Slider, disabled</p>\r\n\t\t\t\t   <Slider disabled defaultValue={60} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t  <p>Controlled Slider，不可改变</p>\r\n\t\t\t\t  <Slider value={40} />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n\r\n", "desc": " 基础的slider" }, { "example": _react2['default'].createElement(Demo2, null), "title": " 带有dots的slider(dots间距同step)", "code": "/**\r\n*\r\n* @title 带有dots的slider(dots间距同step)\r\n* @description 基础的slider\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass Demo2 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tconst style = {width:600,marginLeft:50,marginBottom:60}\r\n\t\treturn (\r\n\t\t\t<div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Slider，`step=20, dots `</p>\r\n\t\t\t\t\t<Slider dots step={20} defaultValue={60} onAfterChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Slider，`step=10, dots, dotStyle={\"{borderColor: 'orange'}\"}, activeDotStyle={\"{borderColor: 'yellow'}\"}`</p>\r\n\t\t\t\t\t<Slider dots step={10} defaultValue={100} onAfterChange={this.log} dotStyle={{ borderColor: 'orange' }} activeDotStyle={{ borderColor: 'yellow' }} />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 基础的slider" }, { "example": _react2['default'].createElement(Demo3, null), "title": " 自定义slider", "code": "/**\r\n*\r\n* @title 自定义slider\r\n* @description 自定义slider样式（track,handle,rail等样式自定义）\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass Demo3 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tlet style={width:600,marginLeft:50,marginBottom:60}\r\n\t\treturn (\r\n\t\t\t<div style={style}>\r\n\t\t\t\t<p>Slider with custom handle and track style.</p>\r\n\t\t\t\t<Slider\r\n\t\t\t\tdefaultValue={30}\r\n\t\t\t\ttrackStyle={{ backgroundColor: 'blue', height: 10 }}\r\n\t\t\t\thandleStyle={{\r\n\t\t\t\tborderColor: 'blue',\r\n\t\t\t\theight: 28,\r\n\t\t\t\twidth: 28,\r\n\t\t\t\tmarginLeft: -14,\r\n\t\t\t\tmarginTop: -9,\r\n\t\t\t\tbackgroundColor: 'pink',\r\n\t\t\t\t}}\r\n\t\t\t\trailStyle={{ backgroundColor: 'red', height: 10 }}\r\n\t\t\t\t/>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 自定义slider样式（track,handle,rail等样式自定义）" }, { "example": _react2['default'].createElement(Demo4, null), "title": " 带有marks的slider", "code": "/**\r\n*\r\n* @title 带有marks的slider\r\n* @description 带有marks标签的step\r\n*\r\n*/\r\n\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass Demo4 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tlet style={width:600,marginLeft:50,marginBottom:60};\r\n\t\tconst marks = {\r\n\t\t\t'-10': '-10°C',\r\n\t\t\t0: <strong>0°C</strong>,\r\n\t\t\t26: '26°C',\r\n\t\t\t47: '47°C',\r\n\t\t\t100: {\r\n\t\t\t\tstyle: {\r\n\t\t\t\tcolor: 'red',\r\n\t\t\t\t},\r\n\t\t\t\tlabel: <strong>100°C</strong>\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\tconst marksOther = {\r\n\t\t\t0: <strong>0°C</strong>,\r\n\t\t\t33: '33°C',\r\n\t\t\t87: '87°C',\r\n\t\t\t100: {\r\n\t\t\t\tstyle: {\r\n\t\t\t\tcolor: 'red',\r\n\t\t\t\t},\r\n\t\t\t\tlabel: <strong>100°C</strong>\r\n\t\t\t}\r\n\t\t};\r\n\t\t\r\n\t\treturn (\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（1）Slider with marks,`steps默认是1`</p>\r\n\t\t\t\t\t\t<Slider min={-10} marks={marks} defaultValue={33} onChange={this.log}  />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（2）Slider with marks and `steps=20`</p>\r\n\t\t\t\t\t\t<Slider min={0} marks={marksOther} step={20} defaultValue={58} onChange={this.log} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（3）Slider with marks and `dots steps=20`</p>\r\n\t\t\t\t\t\t<Slider dots min={0} marks={marksOther} step={20} defaultValue={58} onChange={this.log} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（4）Slider with marks, `step=null`，因此step = marks</p>\r\n\t\t\t\t\t\t<Slider min={0} marks={marksOther} step={null} defaultValue={68} onChange={this.log}  />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（5）Slider with marks, `included=false`</p>\r\n\t\t\t\t\t\t<Slider min={0} marks={marksOther} included={false} defaultValue={20} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（6）Slider with marks and `steps=10,included=false`</p>\r\n\t\t\t\t\t\t<Slider min={-10} marks={marks} step={10} included={false} defaultValue={20} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（7）Range with marks</p>\r\n\t\t\t\t\t\t<Slider.Range min={-10} marks={marks} onChange={this.log} defaultValue={[20, 40]} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div style={style}>\r\n\t\t\t\t\t\t<p>（8）Range with marks and steps</p>\r\n\t\t\t\t\t\t<Slider.Range min={-10} marks={marks} step={10} onChange={this.log} defaultValue={[20, 40]} />\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 带有marks标签的step" }, { "example": _react2['default'].createElement(Demo5, null), "title": " rangeSlider", "code": "/**\r\n*\r\n* @title rangeSlider\r\n* @description 数组变化的slider\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass PureRenderRange extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n  }\r\n  \r\n  handleChange = (value) => {\r\n    console.log(value);\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <Slider.Range defaultValue={[20, 40, 60, 80]} onChange={this.handleChange} allowCross={false} />\r\n    );\r\n  }\r\n}\r\n\r\nclass Demo5 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tlet style={width:600,marginLeft:50,marginBottom:60}\r\n\t\treturn (\r\n\t\t\t<div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`allowCross=false step默认是1 defaultValue=[0, 20]`</p>\r\n\t\t\t\t\t<Slider.Range allowCross={false} defaultValue={[0, 20]} onChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`allowCross=true step默认是1 defaultValue=[10, 40]`</p>\r\n\t\t\t\t\t<Slider.Range defaultValue={[10, 40]} onChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`disabled defaultValue=[0, 20]`</p>\r\n\t\t\t\t\t<Slider.Range allowCross={false} defaultValue={[0, 20]} onChange={this.log} disabled />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`step=20 defaultValue=[20, 80]` </p>\r\n\t\t\t\t\t<Slider.Range step={20} defaultValue={[20, 80]} onBeforeChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Basic Range，`step=20, dots defaultValue=[20, 40]` </p>\r\n\t\t\t\t\t<Slider.Range dots step={20} defaultValue={[20, 40]} onAfterChange={this.log} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Range as child component</p>\r\n\t\t\t\t\t<PureRenderRange />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 数组变化的slider" }, { "example": _react2['default'].createElement(Demo6, null), "title": " 竖直方向的slider", "code": "/**\r\n*\r\n* @title 竖直方向的slider\r\n* @description 竖直vertical\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass Demo6 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t  const style={float: 'left',height: 400, marginBottom: 160, marginLeft: 50,width:200}\r\n\t  const parentStyle = { overflow: 'hidden' };\r\n\t\tconst marks = {\r\n\t\t\t0: <strong>0°C</strong>,\r\n\t\t\t26: '26°C',\r\n\t\t\t47: '47°C',\r\n\t\t\t100: {\r\n\t\t\t\tstyle: {\r\n\t\t\t\tcolor: 'red',\r\n\t\t\t\t},\r\n\t\t\t\tlabel: <strong>100°C</strong>\r\n\t\t\t}\r\n\t\t};\r\n\r\n\t\treturn (\r\n\t\t\t<div style={parentStyle}>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Slider with `marks, step=null`</p>\r\n\t\t\t\t\t<Slider vertical min={0} marks={marks} step={null} onChange={this.log} defaultValue={20} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Slider with `marks and steps=25`</p>\r\n\t\t\t\t\t<Slider vertical dots min={0} marks={marks} step={25} onChange={this.log} defaultValue={20} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Slider with `marks and steps默认是1 included=false`</p>\r\n\t\t\t\t\t<Slider vertical min={0} marks={marks} included={false} defaultValue={20} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Range with `marks steps默认是1,`</p>\r\n\t\t\t\t\t<Slider.Range vertical min={0} marks={marks} onChange={this.log} defaultValue={[20, 40]} />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div style={style}>\r\n\t\t\t\t\t<p>Range with `marks and steps=10`</p>\r\n\t\t\t\t\t<Slider.Range vertical min={0} marks={marks} step={10}onChange={this.log} defaultValue={[20, 40]}/>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 竖直vertical" }, { "example": _react2['default'].createElement(Demo7, null), "title": " 带输入框的slider", "code": "/**\r\n*\r\n* @title 带输入框的slider\r\n* @description 和 数字输入框 组件保持同步。\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nclass CustomizedSlider extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this.state = {\r\n      value:45\r\n    };\r\n  }\r\n  onInputChange = (e) =>{\r\n    //console.log(e.target.value)\r\n    let value = parseInt(e.target.value);\r\n    if(value >= 100){\r\n      value = 100;\r\n    }else if(value <= 0 || e.target.value == ''){\r\n      value = 0;\r\n    }\r\n    this.changeValue(value)\r\n  }\r\n\r\n  onSliderChange = (value) => {\r\n    //console.log(value);\r\n    this.changeValue(value)\r\n  }\r\n  \r\n  changeValue = (value) =>{\r\n    this.setState({\r\n      value:value\r\n    })\r\n  }\r\n  render() {\r\n    return (\r\n      <div>\r\n        <input type=\"number\" value={this.state.value} onChange={this.onInputChange} />\r\n        <br /><br />\r\n        <Slider value={this.state.value} onChange={this.onSliderChange} />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nclass CustomizedRange extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this.state = {\r\n      lowerBound: 20,\r\n      upperBound: 40,\r\n      value: [20, 40],\r\n    };\r\n  }\r\n\r\n  onLowerBoundChange = (e) => {\r\n    let upperBound = this.state.upperBound;\r\n    let value = parseInt(e.target.value);\r\n\r\n    if(value > upperBound){\r\n      value = upperBound\r\n    }else if(value <0 || value == ''){\r\n      value = 0;\r\n    }\r\n\r\n    this.setValue(value,upperBound);\r\n  }\r\n\r\n  onUpperBoundChange = (e) => {\r\n    let lowerBound = this.state.lowerBound;\r\n    let value = parseInt(e.target.value);\r\n\r\n    if(value < lowerBound){\r\n      value = lowerBound\r\n    }else if( value > 100 ){\r\n      value = 100;\r\n    }\r\n    this.setValue(lowerBound,value);\r\n  }\r\n  \r\n  onSliderChange = (value) => {\r\n    let upperBound = value[1];\r\n    let lowerBound = value[0];\r\n    this.setValue(lowerBound,upperBound);\r\n  }\r\n  \r\n  setValue = (lowerBound,upperBound) =>{\r\n    this.setState({\r\n      lowerBound:lowerBound,\r\n      upperBound:upperBound,\r\n      value:[lowerBound, upperBound] \r\n    })\r\n  }\r\n  \r\n  render() {\r\n    return (\r\n      <div>\r\n        <label>LowerBound: </label>\r\n        <input type=\"number\" value={this.state.lowerBound} onChange={this.onLowerBoundChange} />\r\n        <br />\r\n        <label>UpperBound: </label>\r\n        <input type=\"number\" value={this.state.upperBound} onChange={this.onUpperBoundChange} />\r\n        <br /><br />\r\n        <Slider.Range value={this.state.value} onChange={this.onSliderChange} />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nclass Demo7 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tlet style={width:600,marginLeft:50,marginBottom:60}\r\n\t\treturn (\r\n\t\t\t<div>\r\n        <div style={style}>\r\n          <p>Customized Range</p>\r\n          <CustomizedSlider />\r\n        </div>\r\n\t\t\t\t<div style={style}>\r\n  \t\t\t\t<p>Customized Range</p>\r\n  \t\t\t\t<CustomizedRange />\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 和 数字输入框 组件保持同步。" }, { "example": _react2['default'].createElement(Demo8, null), "title": " 带tip的slider", "code": "/**\r\n*\r\n* @title 带tip的slider\r\n* @description 和 tip展示 组件保持同步。\r\n*\r\n*/\r\n\r\nimport React, { Component } from 'react';\r\nimport { Slider } from 'tinper-bee';\r\n\r\nconst createSliderWithTooltip = Slider.createSliderWithTooltip;\r\nconst RangeTooltip = createSliderWithTooltip(Slider.Range);\r\nconst SliderTooltip = createSliderWithTooltip(Slider);\r\n\r\nclass Demo8 extends Component {\r\n\tlog = (value) =>{\r\n\tconsole.log(value); //eslint-disable-line\r\n\t}\r\n\r\n\trender () {\r\n\t\tconst wrapperStyle = { width: 400, margin: 50 };\r\n\t\treturn (\r\n      <div>\r\n        <div style={wrapperStyle}>\r\n          <p>Slider with Tooltip</p>\r\n          <SliderTooltip min={0} max={100} defaultValue={45} tipFormatter={value => `${value}%`}/>\r\n        </div>\r\n        <div style={wrapperStyle}>\r\n          <p>Range with Tooltip</p>\r\n          <RangeTooltip min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />\r\n        </div>\r\n      </div>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 和 tip展示 组件保持同步。", "scss_code": ".tooltip.in{\n  opacity:1;\n}" }];
 	
 	var Demo = function (_Component) {
 	    _inherits(Demo, _Component);
@@ -5582,6 +5582,16 @@
 	  var documentWidth = documentElement.scrollWidth;
 	  var documentHeight = documentElement.scrollHeight;
 	
+	  // scrollXXX on html is sync with body which means overflow: hidden on body gets wrong scrollXXX.
+	  // We should cut this ourself.
+	  var bodyStyle = getComputedStyle(body);
+	  if (bodyStyle.overflowX === 'hidden') {
+	    documentWidth = win.innerWidth;
+	  }
+	  if (bodyStyle.overflowY === 'hidden') {
+	    documentHeight = win.innerHeight;
+	  }
+	
 	  // Reset element position after calculate the visible area
 	  if (element.style) {
 	    element.style.position = originalPosition;
@@ -7857,7 +7867,7 @@
 	    /**
 	     * @title 尺寸
 	     */
-	    size: _propTypes2["default"].oneOf(['sm', 'xg', 'lg']),
+	    size: _propTypes2["default"].oneOf(['sm', 'md', 'xg', 'lg']),
 	    /**
 	     * @title 样式
 	     */
@@ -7871,7 +7881,7 @@
 	    /**
 	    * @title 类型
 	    */
-	    colors: _propTypes2["default"].oneOf(['primary', 'accent', 'success', 'info', 'warning', 'danger', 'default']),
+	    colors: _propTypes2["default"].oneOf(['primary', 'secondary', 'accent', 'success', 'info', 'warning', 'danger', 'dark', 'light', 'default']),
 	    /**
 	     * @title 是否禁用
 	     * @veIgnore
@@ -7901,16 +7911,20 @@
 	
 	var sizeMap = {
 	    sm: 'sm',
+	    md: 'md',
 	    xg: 'xg',
 	    lg: 'lg'
 	},
 	    colorsMap = {
 	    primary: 'primary',
+	    secondary: 'secondary',
 	    accent: 'accent',
 	    success: 'success',
 	    info: 'info',
 	    warning: 'warning',
-	    danger: 'danger'
+	    danger: 'danger',
+	    dark: 'dark',
+	    light: 'light'
 	},
 	    shapeMap = {
 	    block: 'block',
@@ -8168,7 +8182,11 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * This source code is quoted from rc-slider.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * homepage: https://github.com/react-component/slider
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+	
 	
 	var Slider = function (_React$Component) {
 	  _inherits(Slider, _React$Component);
@@ -8365,6 +8383,11 @@
 	});
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	/**
+	* This source code is quoted from rc-slider.
+	* homepage: https://github.com/react-component/slider
+	*/
+	
 	
 	var _react = __webpack_require__(4);
 	
@@ -8463,7 +8486,11 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * This source code is quoted from rc-slider.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * homepage: https://github.com/react-component/slider
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+	
 	
 	function noop() {}
 	
@@ -8812,6 +8839,10 @@
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	/**
+	* This source code is quoted from rc-slider.
+	* homepage: https://github.com/react-component/slider
+	*/
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -8850,7 +8881,11 @@
 	  value: true
 	});
 	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
+	                                                                                                                                                                                                                                                                  * This source code is quoted from rc-slider.
+	                                                                                                                                                                                                                                                                  * homepage: https://github.com/react-component/slider
+	                                                                                                                                                                                                                                                                  */
+	
 	
 	var _react = __webpack_require__(4);
 	
@@ -8950,7 +8985,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /**
+	                                                                                                                                                                                                                  * This source code is quoted from rc-slider.
+	                                                                                                                                                                                                                  * homepage: https://github.com/react-component/slider
+	                                                                                                                                                                                                                  */
+	
 	
 	var Marks = function Marks(_ref) {
 	  var className = _ref.className,
@@ -9044,7 +9083,11 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * This source code is quoted from rc-slider.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * homepage: https://github.com/react-component/slider
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+	
 	
 	var Handle = function (_React$Component) {
 	  _inherits(Handle, _React$Component);
@@ -9136,7 +9179,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } /**
+	                                                                                                                                                                                                    * This source code is quoted from rc-slider.
+	                                                                                                                                                                                                    * homepage: https://github.com/react-component/slider
+	                                                                                                                                                                                                    */
+	
 	
 	function isEventFromHandle(e, handles) {
 	  return Object.keys(handles).some(function (key) {
@@ -9313,7 +9360,10 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /* eslint-disable react/prop-types */
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * This source code is quoted from rc-slider.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * homepage: https://github.com/react-component/slider
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
 	
 	
 	var Range = function (_React$Component) {
@@ -9724,6 +9774,10 @@
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
+	/**
+	* This source code is quoted from rc-slider.
+	* homepage: https://github.com/react-component/slider
+	*/
 	module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 	
 	    var ret = compare ? compare.call(compareContext, objA, objB) : void 0;
@@ -9813,7 +9867,11 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * This source code is quoted from rc-slider.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * homepage: https://github.com/react-component/slider
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+	
 	
 	function createSliderWithTooltip(Component) {
 	  var _class, _temp;
@@ -10908,7 +10966,12 @@
 	  /**
 	   * Sets the direction of the Overlay.
 	   */
-	  placement: _propTypes2["default"].oneOf(['top', 'right', 'bottom', 'left'])
+	  placement: _propTypes2["default"].oneOf(['top', 'right', 'bottom', 'left']),
+	
+	  /**
+	   * 当Overlay在placement方向放不下时的第二优先级方向
+	   */
+	  secondPlacement: _propTypes2["default"].oneOf(['top', 'right', 'bottom', 'left'])
 	});
 	
 	var defaultProps = {
@@ -11130,13 +11193,14 @@
 	        containerPadding = _props2.containerPadding,
 	        target = _props2.target,
 	        placement = _props2.placement,
+	        secondPlacement = _props2.secondPlacement,
 	        shouldUpdatePosition = _props2.shouldUpdatePosition,
 	        rootClose = _props2.rootClose,
 	        positionLeft = _props2.positionLeft,
 	        positionTop = _props2.positionTop,
 	        children = _props2.children,
 	        Transition = _props2.transition,
-	        props = _objectWithoutProperties(_props2, ['container', 'containerPadding', 'target', 'placement', 'shouldUpdatePosition', 'rootClose', 'positionLeft', 'positionTop', 'children', 'transition']);
+	        props = _objectWithoutProperties(_props2, ['container', 'containerPadding', 'target', 'placement', 'secondPlacement', 'shouldUpdatePosition', 'rootClose', 'positionLeft', 'positionTop', 'children', 'transition']);
 	
 	    // Don't un-render the overlay while it's transitioning out.
 	
@@ -11160,6 +11224,7 @@
 	        positionLeft: positionLeft,
 	        positionTop: positionTop,
 	        placement: placement,
+	        secondPlacement: secondPlacement,
 	        shouldUpdatePosition: shouldUpdatePosition },
 	      child
 	    );
@@ -11303,6 +11368,12 @@
 	     * 位置设置
 	     */
 	    placement: _propTypes2["default"].oneOf(['top', 'right', 'bottom', 'left']),
+	
+	    /**
+	     * 第二优先级位置设置
+	     */
+	    secondPlacement: _propTypes2["default"].oneOf(['top', 'right', 'bottom', 'left']),
+	
 	    /**
 	     * 是否需要更新位置
 	     */
@@ -11415,6 +11486,11 @@
 	     */
 	
 	    Position.prototype.updatePosition = function updatePosition(target) {
+	        var _props = this.props,
+	            placement = _props.placement,
+	            secondPlacement = _props.secondPlacement;
+	
+	
 	        if (!this._isMounted) {
 	            return;
 	        }
@@ -11434,14 +11510,36 @@
 	        var overlay = _reactDom2["default"].findDOMNode(this);
 	        var container = (0, _getContainer2["default"])(this.props.container, (0, _ownerDocument2["default"])(this).body);
 	
-	        this.setState((0, _calculatePosition2["default"])(this.props.placement, overlay, target, container, this.props.containerPadding));
+	        // 若设置了第二渲染位置，placement的优先级是： placement > secondPlacement > placement的反方向
+	        if ("secondPlacement" in this.props && secondPlacement) {
+	            var initPosition = (0, _calculatePosition2["default"])(placement, overlay, target, container, this.props.containerPadding);
+	            if (initPosition.inverseArrow) {
+	                var secondPosition = (0, _calculatePosition2["default"])(secondPlacement, overlay, target, container, this.props.containerPadding);
+	
+	                if (secondPosition.inverseArrow) {
+	                    this.setState(_extends({}, initPosition, {
+	                        renderPlacement: placement
+	                    }));
+	                } else {
+	                    this.setState(_extends({}, secondPosition, {
+	                        renderPlacement: secondPlacement
+	                    }));
+	                }
+	            } else {
+	                this.setState(_extends({}, initPosition, {
+	                    renderPlacement: placement
+	                }));
+	            }
+	        } else {
+	            this.setState((0, _calculatePosition2["default"])(placement, overlay, target, container, this.props.containerPadding));
+	        }
 	    };
 	
 	    Position.prototype.render = function render() {
-	        var _props = this.props,
-	            children = _props.children,
-	            className = _props.className,
-	            props = _objectWithoutProperties(_props, ['children', 'className']);
+	        var _props2 = this.props,
+	            children = _props2.children,
+	            className = _props2.className,
+	            props = _objectWithoutProperties(_props2, ['children', 'className']);
 	
 	        var _state = this.state,
 	            positionLeft = _state.positionLeft,

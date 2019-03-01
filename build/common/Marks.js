@@ -22,7 +22,11 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /**
+                                                                                                                                                                                                                  * This source code is quoted from rc-slider.
+                                                                                                                                                                                                                  * homepage: https://github.com/react-component/slider
+                                                                                                                                                                                                                  */
+
 
 var Marks = function Marks(_ref) {
   var className = _ref.className,
