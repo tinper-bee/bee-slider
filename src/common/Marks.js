@@ -1,3 +1,7 @@
+/**
+* This source code is quoted from rc-slider.
+* homepage: https://github.com/react-component/slider
+*/
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';

@@ -1,4 +1,7 @@
-/* eslint-disable react/prop-types */
+/**
+* This source code is quoted from rc-slider.
+* homepage: https://github.com/react-component/slider
+*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
